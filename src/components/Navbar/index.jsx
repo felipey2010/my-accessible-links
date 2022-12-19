@@ -23,7 +23,7 @@ import { ChevronDownIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-export default function Navbar({ link }) {
+export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode()
   // const { isOpen, onOpen, onClose } = useDisclosure()
   const { setLanguage, language, backLink } = usePageManager()

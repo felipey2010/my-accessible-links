@@ -1,17 +1,17 @@
-import MainLayout from "@layout/MainLayout"
+import MainLayout from '@layout/MainLayout'
 import {
   VStack,
   Text,
   Heading,
   HStack,
   Button,
-  useColorModeValue,
-} from "@chakra-ui/react"
-import Link from "next/link"
+  useColorModeValue
+} from '@chakra-ui/react'
+import Link from 'next/link'
 
-import Head from "next/head"
+import Head from 'next/head'
 
-import { usePageManager } from "@home/context/Provider"
+import { usePageManager } from '@home/context/Provider'
 
 export default function HomePage() {
   const { content, language } = usePageManager()
@@ -27,21 +27,23 @@ export default function HomePage() {
       </Head>
 
       <VStack
-        px={{ base: "80px", sm: "85px" }}
+        px={{ base: '80px', sm: '85px' }}
         alignItems="center"
-        justifyContent={"center"}
+        justifyContent={'center'}
         height="calc((100%) - 120px)"
         overflowY="auto"
-        bg={useColorModeValue("gray.200", "gray.800")}>
+        bg={useColorModeValue('gray.200', 'gray.800')}
+      >
         <VStack my="60px">
           <HStack justifyContent="center" py="20px">
             <Heading
               fontWeight={700}
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"110%"}
-              textTransform={"uppercase"}>
+              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              lineHeight={'110%'}
+              textTransform={'uppercase'}
+            >
               Links
-              <Text as={"span"} color={"green.400"} marginLeft="12px">
+              <Text as={'span'} color={'green.400'} marginLeft="12px">
                 Drive
               </Text>
             </Heading>
@@ -50,19 +52,21 @@ export default function HomePage() {
             fontWeight="light"
             color="gray.500"
             paddingBottom="12px"
-            textAlign={"center"}
-            fontSize={{ base: "2xl" }}>
+            textAlign={'center'}
+            fontSize={{ base: '2xl' }}
+          >
             {content[0].description[language]}
           </Text>
 
           <Button
-            colorScheme={"green"}
-            bg={"green.400"}
-            rounded={"full"}
+            colorScheme={'green'}
+            bg={'green.400'}
+            rounded={'full'}
             px={6}
             _hover={{
-              bg: "green.500",
-            }}>
+              bg: 'green.500'
+            }}
+          >
             <Link href={content[0].link}>
               <a>{content[0].button[language]}</a>
             </Link>
