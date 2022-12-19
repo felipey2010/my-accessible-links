@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@layout/*": ["layout/*"],
+      "@styles/*": ["styles/*"],
+      "@home/*": ["modules/home/*"],
+      "@links/*": ["modules/links/*"],
+      "@pf/*": ["modules/pf/*"],
+      "@lib/*": ["lib/*"]
+    }
+  },
+  "exclude": ["build", "config", "node_modules", "public", "scripts"],
+  "include": ["./src/**/*"]
+}

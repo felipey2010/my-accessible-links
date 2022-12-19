@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "plugin:@next/next/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "no-unreachable": "warn",
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/no-anonymous-default-export": "off"
+  }
 }
