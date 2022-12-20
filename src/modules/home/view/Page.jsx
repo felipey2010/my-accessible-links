@@ -27,7 +27,7 @@ export default function HomePage() {
       </Head>
 
       <VStack
-        px={{ base: '80px', sm: '85px' }}
+        px={{ base: '15px', sm: '85px' }}
         alignItems="center"
         justifyContent={'center'}
         height="calc((100%) - 120px)"

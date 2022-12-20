@@ -18,7 +18,7 @@ import { MdLanguage } from 'react-icons/md'
 
 import { usePageManager } from '@home/context/Provider'
 
-import { ChevronDownIcon, ArrowBackIcon } from '@chakra-ui/icons'
+import { ChevronDownIcon, ArrowBackIcon, ChevronUpIcon } from '@chakra-ui/icons'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -32,7 +32,7 @@ export default function Navbar() {
   return (
     <Box
       bg={useColorModeValue('gray.100', 'gray.900')}
-      px={{ base: '80px', sm: '85px' }}
+      px={{ base: '15px', sm: '85px' }}
       w="full"
       m="0"
       boxShadow={'md'}
@@ -71,23 +71,35 @@ export default function Navbar() {
             </Button>
 
             <Menu>
-              <MenuButton
-                as={Button}
-                h="12px"
-                rounded={'full'}
-                variant={'link'}
-                cursor={'pointer'}
-                p={2}
-                minW={0}
-                _hover={{ bg: useColorModeValue('gray.200', 'whiteAlpha.200') }}
-                rightIcon={<ChevronDownIcon />}
-              >
-                <MdLanguage />
-              </MenuButton>
-              <MenuList alignItems={'center'}>
-                <MenuItem onClick={() => setLanguage('en')}>English</MenuItem>
-                <MenuItem onClick={() => setLanguage('pt')}>Português</MenuItem>
-              </MenuList>
+              {({ isOpen }) => (
+                <>
+                  <MenuButton
+                    isActive={isOpen}
+                    as={Button}
+                    h="12px"
+                    rounded={'full'}
+                    variant={'link'}
+                    cursor={'pointer'}
+                    p={2}
+                    minW={0}
+                    color={useColorModeValue('black', 'white')}
+                    _hover={{
+                      bg: useColorModeValue('gray.200', 'whiteAlpha.200')
+                    }}
+                    rightIcon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                  >
+                    <MdLanguage />
+                  </MenuButton>
+                  <MenuList alignItems={'center'} zIndex={100}>
+                    <MenuItem onClick={() => setLanguage('en')}>
+                      English
+                    </MenuItem>
+                    <MenuItem onClick={() => setLanguage('pt')}>
+                      Português
+                    </MenuItem>
+                  </MenuList>
+                </>
+              )}
             </Menu>
           </Stack>
         </Flex>
