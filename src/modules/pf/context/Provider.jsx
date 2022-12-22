@@ -66,12 +66,12 @@ export default function PageManagerProvider({ children }) {
     {
       id: 6,
       title: {
-        en: 'economic deficiency',
+        en: 'Economic insufficiency',
         pt: 'Hipossuficiência econômica'
       },
       description: {
-        en: 'This declaration of economic insufficiency must be completed when you are unable to pay the NMRC issuance fee',
-        pt: 'Esta declaração de hipossuficiência econômica deve ser preenchida quando não tem condições de pagar a taxa de emissão de CRNM'
+        en: 'This declaration of economic insufficiency must be completed when you are unable to pay the NMRC issuance fee. If you fill this form, you will not need to pay the NMRC issuance fee',
+        pt: 'Esta declaração de hipossuficiência econômica deve ser preenchida quando não tem condições de pagar a taxa de emissão de CRNM. Se preencher este formulário, não precisa pagar a taxa de emissão da CRNM'
       },
       link: 'https://www.gov.br/pf/pt-br/assuntos/imigracao/declaracoes-e-formularios/declaracao-de-hipossuficiencia-economica.pdf/@@download/file/Declara%C3%A7%C3%A3o%20de%20hipossufici%C3%AAncia%20econ%C3%B4mica.pdf'
     },
@@ -101,12 +101,12 @@ export default function PageManagerProvider({ children }) {
     {
       id: 9,
       title: {
-        en: 'Course enrollment proof',
-        pt: 'Prova de matrícula no curso'
+        en: 'Proof of enrollment and the academic transcript of the course',
+        pt: 'Prova de matrícula e o histórico escolar do curso'
       },
       description: {
-        en: 'Documentation proving enrollment in the desired course. This document can be issued in the academic system',
-        pt: 'Documentação que comprove a matrícula no curso. Este documento pode ser obtido online no sistema acadêmico'
+        en: 'Documentation proving enrollment and the academic transcript of the course. This document can be issued in the academic system',
+        pt: 'Documentação que comprove a matrícula e o histórico escolar do curso. Este documento pode ser obtido online no sistema acadêmico'
       }
     },
     {
